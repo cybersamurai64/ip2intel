@@ -5,6 +5,7 @@ from rich.console import Console
 
 from modules.network_info import get_network_details
 from modules.abusedb_info import get_abuse_score
+from modules.dns_info import get_dns_details
 
 
 load_dotenv()
@@ -43,6 +44,8 @@ def main():
         print_result("Network Information", net_data)
         abuseipdb_data = get_abuse_score(target_ip)
         print_result("AbuseIPDB Information", abuseipdb_data)
+        dns_data = get_dns_details(target_ip)
+        print_result("DNS Information", dns_data)
 
 
 if __name__ == "__main__":

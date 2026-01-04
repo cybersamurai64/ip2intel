@@ -39,6 +39,15 @@ def get_abuse_score(ip):
                 "is_tor_node": data.get('isTor'),
             }
 
+            reports = data.get('reports') or []
+            if reports:
+                last_report = reports[0]  # Latest report
+                extracted["last_report_date"] = last_report.get('reportedAt')
+
+                comment = last_report.get('comment')
+                if comment:
+                    extracted["last_report_comment"] = comment.strip().replace('\n', ' ')
+
             return extracted
 
         elif response.status_code == 401:
