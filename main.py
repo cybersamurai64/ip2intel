@@ -6,6 +6,7 @@ from rich.console import Console
 from modules.network_info import get_network_details
 from modules.abusedb_info import get_abuse_score
 from modules.dns_info import get_dns_details
+from modules.vt_intel import get_vt_score
 
 
 load_dotenv()
@@ -46,6 +47,8 @@ def main():
         print_result("AbuseIPDB Information", abuseipdb_data)
         dns_data = get_dns_details(target_ip)
         print_result("DNS Information", dns_data)
+        vt_data = get_vt_score(target_ip)
+        print_result("VirusTotal Information", vt_data)
 
 
 if __name__ == "__main__":
