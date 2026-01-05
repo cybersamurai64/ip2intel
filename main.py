@@ -50,13 +50,14 @@ def print_result(title, data):
             status = "[bold green]YES[/bold green]" if is_positive else "[bold red]NO[/bold red]"
             console.print(f"[cyan]{clean_key}:[/cyan] {status}")
 
-        #pksmgewoskvmwrokvmerwosikvmerokivmerovmo
+        # 7. Trust Level (GreyNoise)
         elif key == "trust_level":
             # 1 = Megbízható (Zöld), 2 = Kevésbé megbízható (Sárga), egyéb = Fehér
             color = "bold green" if value == "1" else "bold yellow" if value == "2" else "white"
             level_text = "1 (Very High)" if value == "1" else "2 (High)" if value == "2" else value
             console.print(f"[cyan]{clean_key}:[/cyan] [{color}]{level_text}[/{color}]")
 
+        # 8. Classification (GreyNoise)
         elif key == "classification":
             if "malicious" in val_str:
                 color = "bold red"
