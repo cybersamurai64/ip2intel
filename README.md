@@ -1,6 +1,6 @@
-# IP Enricher
+# IP2INTEL
 
-**IP Enricher** is a Python-based command-line tool designed to gather comprehensive security and network intelligence about a given IP address from multiple sources. The tool assists security analysts and system administrators in quickly verifying the reputation, geographic location, and technical background of IP addresses.
+**IP2INTEL** is a Python-based command-line tool designed to gather comprehensive security and network intelligence about a given IP address from multiple sources. The tool assists security analysts and system administrators in quickly verifying the reputation, geographic location, and technical background of IP addresses.
 
 ## Key Features
 
